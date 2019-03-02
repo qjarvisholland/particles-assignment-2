@@ -1,5 +1,3 @@
-
-
 class Birdie {
  constructor(){
   this.position = createVector();
@@ -9,13 +7,8 @@ class Birdie {
 
   this.velocity = this.velocity.add(0.6);
   }
-
-      move() {
- 
-
-
+  move() {
   // Bounce off edges
-
   if (this.position.x >= width) {
     this.velocity.rotate(180);
   }
@@ -31,49 +24,18 @@ class Birdie {
    // this.acceleration.y = this.acceleration.mult(-1);
    this.velocity.rotate(-180);
   }
-
-
-
        this.position.add(this.velocity);
       this.velocity.add(this.acceleration);
      // console.log(this.position.x);
-    
 }
-
-// lllll
-
-
-   
-
-    display() {
+  display() {
       strokeWeight(this.bigness);
-      stroke(255);
+      //stroke(255);
      //point(this.position.x, this.position.y);
 
-
-
-    var ellipseX = this.position.x;
-     var ellipseY = this.position.y;
-
-
-
-
-     /*
-     if (this.position.x < this.bigness/2 || 
-      this.position.x > window.width - 0.5*this.bigness) {
-    this.velocity.mult(-1,-1);
-}
-if (this.position.y < this.bigness/2 || 
-     this.position.y > window.height - this.bigness) {
-  this.velocity.mult(-1,-1);
-}
-*/
+      var ellipseX = this.position.x;
+      var ellipseY = this.position.y;
 
       ellipse(this.position.x,this.position.y,this.bigness/4,this.bigness/4);
     }
-
-
-
-
 }
-
